@@ -1,0 +1,57 @@
+# The visual editor's contract for sections/agents.blade.php.
+title: Agents
+description: The argument on the left and one agent's actual run on the right
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Work carries on without you in the room."
+    body:
+        type: textarea
+        label: Body
+        rows: 4
+        default: "An agent reads the note, reads the page it sits on, and does the part that never needed a person. It shows every step, so you are approving work rather than trusting a black box."
+    linkText:
+        type: text
+        label: Link text
+        default: "How agents work"
+    link:
+        type: url
+        label: Link
+        default: "/product#agents"
+    runNote:
+        type: textarea
+        label: The note that started the run
+        rows: 2
+        default: "Draft the 2.4 changelog from these PRs."
+    runAuthor:
+        type: text
+        label: Note byline
+        default: "Dara · in Q3 launch brief"
+    runTitle:
+        type: text
+        label: Agent name
+        default: "Release agent"
+    runResult:
+        type: textarea
+        label: What the agent produced
+        rows: 4
+        default: "Margin 2.4 — the margin rail arrives. Notes now attach to any block, agents can pick them up, and the changelog you are reading wrote itself."
+    steps:
+        type: repeater
+        label: Steps
+        source: collections.steps
+        add_button_label: "Add step"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Step
+                default: "A new step"
+            state:
+                type: select
+                label: State
+                default: "done"
+                options:
+                    done: Done
+                    doing: In progress

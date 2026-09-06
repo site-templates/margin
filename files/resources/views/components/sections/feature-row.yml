@@ -1,0 +1,59 @@
+# The visual editor's contract for sections/feature-row.blade.php.
+# The drawing is its own block — select it on the canvas to change what it
+# shows and the words inside it.
+title: Capability row
+description: One capability — words on one side, a drawing on the other, optionally painted
+fields:
+    anchor:
+        type: text
+        label: Anchor
+        description: The id the nav menu links to, without the hash.
+        default: "feature"
+    heading:
+        type: text
+        label: Heading
+        default: "A capability"
+    body:
+        type: textarea
+        label: Body
+        rows: 4
+        default: "What it does and why it is here."
+    linkText:
+        type: text
+        label: Link text
+        description: Leave empty to hide the link.
+        default: ""
+    link:
+        type: url
+        label: Link
+        default: "#"
+    mock:
+        type: select
+        label: Drawing
+        default: "sources"
+        options:
+            sources: Sources folding into a page
+            notes: A note in a document's margin
+            agent: An agent's finished run
+            search: Search with its citation
+            board: A board of notes
+            connections: Connected apps
+    side:
+        type: select
+        label: Drawing side
+        default: "right"
+        options:
+            right: Right
+            left: Left
+    note:
+        type: select
+        label: Paint the row
+        description: A painted row runs full width in that colour.
+        default: "none"
+        options:
+            none: Not painted
+            amber: Amber
+            coral: Coral
+            sky: Sky
+            midnight: Midnight
+            wash: Pale blue

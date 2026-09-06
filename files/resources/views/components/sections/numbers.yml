@@ -1,0 +1,19 @@
+# The visual editor's contract for sections/numbers.blade.php.
+title: Figures
+description: One row of numbers under a hairline — no cards, no icons
+fields:
+    items:
+        type: repeater
+        label: Figures
+        source: collections.numbers
+        add_button_label: "Add figure"
+        item_label: value
+        sub_fields:
+            value:
+                type: text
+                label: Number
+                default: "100"
+            label:
+                type: text
+                label: What it counts
+                default: "what this number means"

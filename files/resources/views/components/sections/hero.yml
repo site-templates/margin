@@ -1,0 +1,81 @@
+# The visual editor's contract for sections/hero.blade.php.
+# The drawn window below the buttons is its own block — select it on the
+# canvas to edit the document, the checklist and the agent.
+title: Hero
+description: The ringed marks, the swiped headline, one sentence, two buttons, and the drawn workspace
+fields:
+    showMarks:
+        type: toggle
+        label: Show the marks row
+        default: "1"
+    headingBefore:
+        type: text
+        label: Headline, before the swipe
+        default: "Where a note in the margin"
+    headingSwipe:
+        type: text
+        label: The swiped word
+        description: Sits inside the peach marker swipe.
+        default: "becomes"
+    headingAfter:
+        type: text
+        label: Headline, after the swipe
+        default: "the work."
+    body:
+        type: textarea
+        label: Opening sentence
+        rows: 3
+        default: "Write the doc, leave a note, let an agent pick it up. In Margin the thinking and the doing stay on the same page."
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "#"
+    showSecondary:
+        type: toggle
+        label: Show the second button
+        default: "1"
+    secondaryText:
+        type: text
+        label: Second button text
+        default: "Book a demo"
+    secondaryLink:
+        type: url
+        label: Second button link
+        default: "#"
+    hint:
+        type: text
+        label: Line under the buttons
+        description: Leave empty to hide it.
+        default: "Free for up to 10 people. No card needed."
+    marks:
+        type: repeater
+        label: The marks row
+        source: collections.marks
+        add_button_label: "Add mark"
+        item_label: glyph
+        sub_fields:
+            glyph:
+                type: select
+                label: Glyph
+                default: "check"
+                options:
+                    rule: Margin rule
+                    check: Check
+                    pen: Pen
+                    spark: Spark
+                    page: Page
+                    chat: Comment
+                    clock: Clock
+            note:
+                type: select
+                label: Ring colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight

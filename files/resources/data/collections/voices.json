@@ -1,0 +1,29 @@
+[
+    {
+        "quote": "We stopped writing the same decision down in three places. That is the whole pitch, and it turned out to be worth a headcount.",
+        "name": "Rowan Ellery",
+        "role": "Head of Operations",
+        "company": "Orbital",
+        "avatar": "https://assets.ui.sh/avatars/3.webp?size=96",
+        "note": "coral",
+        "logo": "https://assets.ui.sh/logos/orbital.svg?color=%23141310"
+    },
+    {
+        "quote": "The margin notes are the thing. Our reviews used to end in a doc nobody opened again — now they end in work that has an owner.",
+        "name": "Sasha Merrin",
+        "role": "Director of Product Design",
+        "company": "Looply",
+        "avatar": "https://assets.ui.sh/avatars/16.webp?size=96",
+        "note": "sky",
+        "logo": "https://assets.ui.sh/logos/looply.svg?color=%23141310"
+    },
+    {
+        "quote": "Our agents draft the changelog, the release notes and half the support replies. We read them. That is a fair trade.",
+        "name": "Ari Vance",
+        "role": "Engineering Lead",
+        "company": "Axiom",
+        "avatar": "https://assets.ui.sh/avatars/13.webp?size=96",
+        "note": "amber",
+        "logo": "https://assets.ui.sh/logos/axiom.svg?color=%23141310"
+    }
+]

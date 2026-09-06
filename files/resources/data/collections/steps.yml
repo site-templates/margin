@@ -1,0 +1,6 @@
+# Column types for steps.json — what the agent did, in order.
+fields:
+    text:
+        type: text
+    state:
+        type: text

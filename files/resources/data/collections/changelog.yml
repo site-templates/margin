@@ -1,0 +1,12 @@
+# Column types for changelog.json — the source of truth the builder reads.
+fields:
+    version:
+        type: text
+    dateFormatted:
+        type: text
+    title:
+        type: text
+    note:
+        type: text
+    content:
+        type: richtext

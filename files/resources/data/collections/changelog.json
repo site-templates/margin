@@ -1,0 +1,44 @@
+[
+    {
+        "version": "2.4",
+        "dateFormatted": "14 October 2026",
+        "title": "The margin rail",
+        "note": "amber",
+        "content": "<p>Notes now attach to any block, not just paragraphs — headings, lists, tables, code and embedded frames all take one. The rail beside a page shows every open note in reading order, and clicking one scrolls to the block that carries it.</p><ul><li>Notes on any block, including embeds</li><li>The rail collapses on narrow screens rather than wrapping</li><li>An agent picking up a note now cites the block, not the page</li></ul>"
+    },
+    {
+        "version": "2.3",
+        "dateFormatted": "30 September 2026",
+        "title": "Agent step logs",
+        "note": "coral",
+        "content": "<p>Every agent run now writes a step log you can read before you accept its work: what it read, what it decided, and what it deliberately left alone. An agent that cannot show its reasoning for a step no longer takes it.</p><ul><li>Step logs on every run, including failed ones</li><li>Failed runs no longer count against your monthly allowance</li><li>Runs can be replayed against a newer version of a page</li></ul>"
+    },
+    {
+        "version": "2.2",
+        "dateFormatted": "11 September 2026",
+        "title": "Usage pricing",
+        "note": "sky",
+        "content": "<p>Reading and writing are free for everyone in your company, on every plan. You are billed for agent runs instead of seats. Existing annual contracts keep their old terms until renewal, and nobody's bill went up in the switch.</p>"
+    },
+    {
+        "version": "2.1",
+        "dateFormatted": "20 August 2026",
+        "title": "Search that cites",
+        "note": "midnight",
+        "content": "<p>Ask a question and Margin answers from your own pages with the exact line it read attached. If it cannot find a line, it says so rather than composing something plausible.</p><ul><li>Citations link to the block, not the page</li><li>Results respect page permissions per person</li><li>Slack and Linear are searched alongside your pages</li></ul>"
+    },
+    {
+        "version": "2.0",
+        "dateFormatted": "29 July 2026",
+        "title": "Agents",
+        "note": "coral",
+        "content": "<p>Agents can now pick up a note, do the work and hand back a draft. They ship with four jobs out of the box — triage the inbox, draft the changelog, answer from the runbook and summarise the week — and you can write your own as a note that never closes.</p>"
+    },
+    {
+        "version": "1.9",
+        "dateFormatted": "08 July 2026",
+        "title": "Connections",
+        "note": "sky",
+        "content": "<p>Slack threads become notes, pull requests close them, and Linear issues stay in step both ways. Support tickets from Zendesk can now find their own runbook page.</p>"
+    }
+]

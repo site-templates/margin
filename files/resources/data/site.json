@@ -1,0 +1,66 @@
+{
+    "name": "Margin",
+    "nav_links": [
+        { "text": "Customers", "url": "/customers" },
+        { "text": "Pricing", "url": "/pricing" },
+        { "text": "Blog", "url": "/blog" },
+        { "text": "Changelog", "url": "/changelog" }
+    ],
+    "product_links": [
+        { "text": "Docs", "url": "/product#docs", "note": "sky", "description": "Write it down, together" },
+        { "text": "Margin notes", "url": "/product#notes", "note": "amber", "description": "A note becomes a task" },
+        { "text": "Agents", "url": "/product#agents", "note": "coral", "description": "They pick the work up" },
+        { "text": "Search", "url": "/product#search", "note": "midnight", "description": "Answers with the source" },
+        { "text": "Projects", "url": "/product#projects", "note": "sky", "description": "Every note in one board" },
+        { "text": "Connections", "url": "/product#connections", "note": "amber", "description": "Slack, GitHub, Linear" }
+    ],
+    "footer_columns": [
+        {
+            "text": "Product",
+            "url": "/product",
+            "children": [
+                { "text": "Docs", "url": "/product#docs" },
+                { "text": "Margin notes", "url": "/product#notes" },
+                { "text": "Agents", "url": "/product#agents" },
+                { "text": "Search", "url": "/product#search" },
+                { "text": "Pricing", "url": "/pricing" }
+            ]
+        },
+        {
+            "text": "Company",
+            "url": "/about",
+            "children": [
+                { "text": "About", "url": "/about" },
+                { "text": "Customers", "url": "/customers" },
+                { "text": "Changelog", "url": "/changelog" },
+                { "text": "Careers", "url": "/about#careers" }
+            ]
+        },
+        {
+            "text": "Resources",
+            "url": "/blog",
+            "children": [
+                { "text": "Blog", "url": "/blog" },
+                { "text": "Help centre", "url": "#" },
+                { "text": "Developers", "url": "#" },
+                { "text": "Templates", "url": "#" }
+            ]
+        },
+        {
+            "text": "Get started",
+            "url": "#",
+            "children": [
+                { "text": "Start free", "url": "#" },
+                { "text": "Book a demo", "url": "#" },
+                { "text": "Log in", "url": "#" },
+                { "text": "Contact", "url": "mailto:hello@example.com" }
+            ]
+        }
+    ],
+    "footer_legal": [
+        { "text": "Privacy", "url": "#" },
+        { "text": "Terms", "url": "#" },
+        { "text": "Security", "url": "#" },
+        { "text": "Cookies", "url": "#" }
+    ]
+}

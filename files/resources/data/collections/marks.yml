@@ -1,0 +1,6 @@
+# Column types for marks.json — the little ringed marks above the headline.
+fields:
+    glyph:
+        type: text
+    note:
+        type: text

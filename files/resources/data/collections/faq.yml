@@ -1,0 +1,6 @@
+# Column types for faq.json — the questions at the foot of the pricing page.
+fields:
+    question:
+        type: text
+    answer:
+        type: textarea

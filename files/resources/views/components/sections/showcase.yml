@@ -1,0 +1,62 @@
+# The visual editor's contract for sections/showcase.blade.php.
+# Each panel is a row of the showcase collection; the drawing inside it is
+# chosen by the mock field, not by markup.
+title: Painted panels
+description: The wide panel and the two beneath it, each in a note colour with a drawing inside
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Everything the team knows, on one page."
+    body:
+        type: textarea
+        label: Sentence under the heading
+        rows: 3
+        default: "Margin holds the writing, the work and the conversation about both — so the answer is never three tools away."
+    items:
+        type: repeater
+        label: Panels
+        source: collections.showcase
+        add_button_label: "Add panel"
+        item_label: title
+        sub_fields:
+            title:
+                type: text
+                label: Title
+                default: "A new panel"
+            body:
+                type: textarea
+                label: Body
+                rows: 3
+                default: "What this part of the product does."
+            linkText:
+                type: text
+                label: Link text
+                default: "Learn more"
+            link:
+                type: url
+                label: Link
+                default: "/product"
+            note:
+                type: select
+                label: Panel colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+                    wash: Pale blue
+            mock:
+                type: select
+                label: Drawing
+                default: "sources"
+                options:
+                    sources: Sources folding into a page
+                    search: Search with its citation
+                    board: A board of notes
+            wide:
+                type: toggle
+                label: Full width
+                description: The panel spans both columns.
+                default: "0"

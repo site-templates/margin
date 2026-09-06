@@ -1,0 +1,10 @@
+# Column types for compare.json — one row of the plan comparison table.
+fields:
+    feature:
+        type: text
+    free:
+        type: text
+    team:
+        type: text
+    business:
+        type: text

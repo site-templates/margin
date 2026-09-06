@@ -1,0 +1,6 @@
+# Column types for logos.json — the customer wordmarks under the hero.
+fields:
+    name:
+        type: text
+    image:
+        type: image

@@ -1,0 +1,79 @@
+# The visual editor's contract for nav.blade.php.
+# The page links come from resources/data/site.json (nav_links) and the
+# Product menu from product_links, so editing them here changes every page.
+title: Header
+description: The sticky header — mark, Product menu, page links, log in, and the one blue button
+fields:
+    brand:
+        type: text
+        label: Site name
+        description: Sits beside the mark and is read by screen readers.
+        default: "Margin"
+    productLabel:
+        type: text
+        label: Menu label
+        default: "Product"
+    signInText:
+        type: text
+        label: Log in text
+        default: "Log in"
+    signInLink:
+        type: url
+        label: Log in link
+        default: "#"
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "#"
+    current:
+        type: text
+        label: Current page path
+        description: Set by each page — the matching link reads as current.
+        default: "/"
+    product:
+        type: repeater
+        label: Product menu
+        add_button_label: "Add item"
+        item_label: text
+        source: site.product_links
+        sub_fields:
+            text:
+                type: text
+                label: Label
+                default: "New item"
+            description:
+                type: text
+                label: One line
+                default: "What it does"
+            url:
+                type: url
+                label: Link
+                default: "/product"
+            note:
+                type: select
+                label: Dot colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+    links:
+        type: repeater
+        label: Page links
+        add_button_label: "Add link"
+        item_label: text
+        source: site.nav_links
+        sub_fields:
+            text:
+                type: text
+                label: Label
+                default: "New link"
+            url:
+                type: url
+                label: Link
+                default: "/"

@@ -1,0 +1,29 @@
+[
+    {
+        "title": "One place the whole team actually writes in.",
+        "body": "Docs, projects, decisions and the notes hanging off them. Nothing lives in four tools and three inboxes any more.",
+        "linkText": "See how docs work",
+        "link": "/product#docs",
+        "note": "sky",
+        "mock": "sources",
+        "wide": true
+    },
+    {
+        "title": "Answers that show their working.",
+        "body": "Ask in plain language. Margin answers from your own pages and hands you the line it read.",
+        "linkText": "See search",
+        "link": "/product#search",
+        "note": "amber",
+        "mock": "search",
+        "wide": false
+    },
+    {
+        "title": "Every note, waiting on one board.",
+        "body": "A note in the margin becomes a card the moment somebody needs it done. Nothing gets typed twice.",
+        "linkText": "See projects",
+        "link": "/product#projects",
+        "note": "midnight",
+        "mock": "board",
+        "wide": false
+    }
+]

@@ -1,0 +1,8 @@
+# Column types for board.json — the cards in the third panel's little board.
+fields:
+    text:
+        type: text
+    column:
+        type: text
+    note:
+        type: text

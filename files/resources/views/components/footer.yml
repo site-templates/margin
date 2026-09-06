@@ -1,0 +1,54 @@
+# The visual editor's contract for footer.blade.php.
+# The link columns come from footer_columns in resources/data/site.json.
+title: Footer
+description: The mark, a line worth reading, the link columns, and the legal row
+fields:
+    brand:
+        type: text
+        label: Site name
+        default: "Margin"
+    quote:
+        type: textarea
+        label: Quote
+        description: One line under the mark. Set in the serif.
+        rows: 3
+        default: "We shape our tools, and thereafter our tools shape us."
+    quoteAuthor:
+        type: text
+        label: Quote author
+        default: "Marshall McLuhan"
+    legal:
+        type: text
+        label: Copyright line
+        default: "© 2026 Margin Labs, Inc."
+    legalLinks:
+        type: repeater
+        label: Legal links
+        add_button_label: "Add link"
+        item_label: text
+        source: site.footer_legal
+        sub_fields:
+            text:
+                type: text
+                label: Label
+                default: "New link"
+            url:
+                type: url
+                label: Link
+                default: "#"
+    columns:
+        type: repeater
+        label: Link columns
+        add_button_label: "Add column"
+        item_label: text
+        nestable: true
+        source: site.footer_columns
+        sub_fields:
+            text:
+                type: text
+                label: Heading
+                default: "New column"
+            url:
+                type: url
+                label: Heading link
+                default: "#"

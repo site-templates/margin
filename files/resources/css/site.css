@@ -1,0 +1,685 @@
+/*
+    Margin — the whole design system, in one file.
+
+    Every colour and font this template uses is declared once, here, in the
+    theme block. Section markup never writes a raw hex or a bg-zinc-* class:
+    it writes bg-canvas, text-ink, border-line, font-display, bg-accent.
+    Retune a token below and the entire site follows.
+
+    The palette is a warm paper notebook: an off-white canvas that reads as
+    tactile rather than clinical, four warm text tiers instead of grey, one
+    blue that does the work of every call to action, and four note hues that
+    paint whole panels the way a sticky note paints a page.
+*/
+
+@theme {
+    /* Surfaces. Cards are white ON the warm canvas — never the other way round. */
+    --color-canvas: #f6f5f4;
+    --color-surface: #ffffff;
+    --color-well: #efedea;
+
+    /*
+        Four warm text tiers do the work of hierarchy. On the canvas they
+        measure 17.0:1, 9.0:1, 5.5:1 and 4.8:1 — every one of them clears AA,
+        so no tier is off-limits for a sentence.
+    */
+    --color-ink: #141310;
+    --color-lede: #4a423a;
+    --color-muted: #6b625a;
+    --color-faint: #756b62;
+
+    --color-line: rgb(20 19 16 / 0.09);
+    --color-line-strong: rgb(20 19 16 / 0.16);
+
+    /*
+        The one action colour. White on it measures 4.6:1, so it fills
+        buttons; accent-text is its darker twin for accent-coloured type on
+        the canvas, where the fill colour would only reach 4.3:1.
+    */
+    --color-accent: #0075de;
+    --color-accent-lift: #0064c0;
+    --color-accent-ink: #ffffff;
+    --color-accent-text: #005cb0;
+    --color-accent-wash: #e6f3fe;
+    --color-accent-soft: #a9d4f8;
+
+    /*
+        The note hues. These paint whole panels — never a border, never type.
+        The three warm ones carry ink; midnight carries white.
+    */
+    --color-note-amber: #ffb110;
+    --color-note-coral: #f9563d;
+    --color-note-sky: #7cbcf5;
+    --color-note-midnight: #0d1330;
+    --color-note-ink: #141310;
+
+    /* The marker swipe behind one word of the headline. */
+    --color-highlight: #fbdcb9;
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: "Source Serif 4", ui-serif, Georgia, Cambria, serif;
+
+    --font-sans--font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss03";
+    --font-display--font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss03";
+
+    /*
+        Two shadows on the whole site, and no more: the header as it leaves
+        the top of the page, and the window the hero stands on. Cards use a
+        hairline ring instead — that is the notebook, not a UI kit.
+    */
+    --shadow-header: 0 0.7px 1.5px rgb(20 19 16 / 0.02), 0 3px 9px rgb(20 19 16 / 0.04);
+    --shadow-window: 0 1px 2px rgb(20 19 16 / 0.04), 0 12px 32px rgb(20 19 16 / 0.08);
+
+    /* One easing for everything that moves: quick out, long soft settle. */
+    --ease-glide: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+    background-color: var(--color-canvas);
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* One stray wide element must never give the whole page a sideways scroll. */
+body {
+    overflow-x: clip;
+}
+
+/* Anchored sections land below the sticky header instead of underneath it. */
+[id] {
+    scroll-margin-top: 5.5rem;
+}
+
+::selection {
+    background-color: var(--color-highlight);
+    color: var(--color-ink);
+}
+
+/* A crisp ring instead of the browser's default halo. Keyboard users only. */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/*
+    Comfortable thumbs. On touch screens every bare text link grows a 44px
+    hit area through padding cancelled by a negative margin, so nothing in
+    the layout moves and nothing is smaller than a fingertip.
+*/
+@media (pointer: coarse) {
+    .text-link {
+        padding-block: 0.875rem;
+        margin-block: -0.875rem;
+    }
+
+    /* Anything shaped like a control clears 44px on a phone. */
+    .btn-primary,
+    .btn-ghost,
+    .btn-quiet,
+    .tap {
+        min-height: 2.75rem;
+    }
+}
+
+/* ── Type ──────────────────────────────────────────────────────────────── */
+
+/*
+    The reference's signature is aggressive negative tracking at display
+    sizes — it is what makes a big warm headline read as confident rather
+    than airy. Body copy stays at normal tracking.
+*/
+.display-hero {
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+}
+
+.display-page {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    line-height: 1.06;
+    letter-spacing: -0.035em;
+}
+
+.display-section {
+    font-size: clamp(2rem, 3.6vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.display-card {
+    font-size: 1.375rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+/* ── The marker swipe ──────────────────────────────────────────────────── */
+
+/*
+    One word of the headline sits in a peach swipe. It is a padded inline
+    box with a full radius that overlaps the line above and below, so it
+    reads as something drawn over the sentence rather than a chip inserted
+    into it.
+*/
+.swipe {
+    background-color: var(--color-highlight);
+    border-radius: 9999px;
+    padding-inline: 0.32em;
+    padding-block: 0.04em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* ── The margin rail ───────────────────────────────────────────────────── */
+
+/*
+    Margin's signature. A hairline vertical rule with annotation chips
+    pinned to it, each hanging off a short connector — a note written in a
+    book's margin. It is the structure of the "what Margin does" list, the
+    reading spine of a post, the date gutter of the changelog, and it is
+    drawn inside the hero window.
+
+    The rule itself is a pseudo-element on the list so the chips stay plain
+    list items, and it stops at the last chip rather than running past it.
+*/
+.rail {
+    position: relative;
+}
+
+.rail::before {
+    content: "";
+    position: absolute;
+    top: 0.75rem;
+    bottom: 0.75rem;
+    left: 0;
+    width: 1px;
+    background-color: var(--color-line-strong);
+}
+
+.rail-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+/* The connector: a hairline that reaches from the rule to the chip. */
+.rail-item::before {
+    content: "";
+    position: absolute;
+    top: 1.375rem;
+    left: 0;
+    width: 1.25rem;
+    height: 1px;
+    background-color: var(--color-line-strong);
+    transform-origin: left center;
+}
+
+/* The knot where the connector meets the rule. */
+.rail-item::after {
+    content: "";
+    position: absolute;
+    top: 1.125rem;
+    left: -0.1875rem;
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 9999px;
+    background-color: var(--color-canvas);
+    outline: 1px solid var(--color-line-strong);
+}
+
+/*
+    The one authored motion moment on the site: a chip attaches to the rail.
+    The connector draws out from the rule, then the chip settles the last
+    few pixels. Only with JavaScript — without it everything is at rest.
+*/
+html.js .rail-item::before {
+    scale: 0 1;
+    transition: scale 0.45s var(--ease-glide);
+}
+
+html.js .rail-item.is-visible::before {
+    scale: 1 1;
+}
+
+html.js .rail-item .rail-chip {
+    opacity: 0;
+    translate: 0.5rem 0;
+    transition: opacity 0.5s var(--ease-glide) 0.15s, translate 0.5s var(--ease-glide) 0.15s;
+}
+
+html.js .rail-item.is-visible .rail-chip {
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────── */
+
+/*
+    Three buttons, defined once. The primary is the one blue fill; the ghost
+    is its soft blue wash, the reference's own pairing; the quiet button is
+    a white pill in a hairline for actions inside cards. Add .btn-sm for the
+    header and .btn-lg for the hero.
+*/
+.btn-primary,
+.btn-ghost,
+.btn-quiet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    height: 2.5rem;
+    padding-inline: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: -0.011em;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-accent-ink);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent-lift);
+}
+
+.btn-primary:active {
+    background-color: var(--color-accent);
+}
+
+.btn-ghost {
+    background-color: var(--color-accent-wash);
+    color: var(--color-accent-text);
+}
+
+.btn-ghost:hover {
+    background-color: #d7ebfd;
+}
+
+.btn-ghost:active {
+    background-color: var(--color-accent-wash);
+}
+
+.btn-quiet {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    outline: 1px solid var(--color-line-strong);
+    outline-offset: -1px;
+}
+
+.btn-quiet:hover {
+    background-color: var(--color-well);
+}
+
+.btn-sm {
+    height: 2.25rem;
+    padding-inline: 0.875rem;
+    font-size: 0.875rem;
+}
+
+.btn-lg {
+    height: 3rem;
+    padding-inline: 1.375rem;
+    font-size: 1rem;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────── */
+
+/*
+    The Product menu opens on hover and on keyboard focus with no script at
+    all; main.js only adds a tap toggle for touch screens (data-open) and
+    the phone menu (data-menu-open).
+*/
+.nav-menu {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 0.375rem;
+    transition: opacity 0.18s ease, translate 0.18s var(--ease-glide), visibility 0s 0.18s;
+}
+
+.nav-item:hover .nav-menu,
+.nav-item:focus-within .nav-menu,
+.nav-item[data-open] .nav-menu {
+    opacity: 1;
+    visibility: visible;
+    translate: 0 0;
+    transition: opacity 0.18s ease, translate 0.18s var(--ease-glide), visibility 0s;
+}
+
+.nav-item:hover .nav-chevron,
+.nav-item:focus-within .nav-chevron,
+.nav-item[data-open] .nav-chevron {
+    rotate: 180deg;
+}
+
+.nav-chevron {
+    transition: rotate 0.18s var(--ease-glide);
+}
+
+/* The header gains its hairline and shadow only once the page has scrolled. */
+#header[data-stuck] .header-bar {
+    border-color: var(--color-line);
+    box-shadow: var(--shadow-header);
+}
+
+#mobile-menu {
+    display: none;
+}
+
+#header[data-menu-open] #mobile-menu {
+    display: block;
+}
+
+#header[data-menu-open] .menu-icon-open,
+#header:not([data-menu-open]) .menu-icon-close {
+    display: none;
+}
+
+/* ── The note panels ───────────────────────────────────────────────────── */
+
+/*
+    A panel sets data-note once and everything inside it reads var(--note)
+    and var(--note-ink) — so the same drawn mock is amber on one row and
+    midnight on the next by one attribute, with no colour in the markup.
+*/
+[data-note="amber"] {
+    --note: var(--color-note-amber);
+    --note-ink: var(--color-note-ink);
+    --note-veil: rgb(20 19 16 / 0.12);
+}
+
+[data-note="coral"] {
+    --note: var(--color-note-coral);
+    --note-ink: var(--color-note-ink);
+    --note-veil: rgb(20 19 16 / 0.12);
+}
+
+[data-note="sky"] {
+    --note: var(--color-note-sky);
+    --note-ink: var(--color-note-ink);
+    --note-veil: rgb(20 19 16 / 0.12);
+}
+
+[data-note="midnight"] {
+    --note: var(--color-note-midnight);
+    --note-ink: #ffffff;
+    --note-veil: rgb(255 255 255 / 0.16);
+}
+
+[data-note="wash"] {
+    --note: var(--color-accent-wash);
+    --note-ink: var(--color-note-ink);
+    --note-veil: rgb(20 19 16 / 0.12);
+}
+
+/* ── Drawn product mocks ───────────────────────────────────────────────── */
+
+/*
+    Every screenshot on this site is markup. These are the two pieces of
+    that drawing that CSS does better than a utility class: the ruled paper
+    behind a document, and the caret that blinks in it.
+*/
+.ruled {
+    background-image: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent calc(var(--rule-gap, 1.75rem) - 1px),
+        var(--color-line-strong) calc(var(--rule-gap, 1.75rem) - 1px),
+        var(--color-line-strong) var(--rule-gap, 1.75rem)
+    );
+}
+
+.caret {
+    animation: caret-blink 1.1s steps(2, start) infinite;
+}
+
+@keyframes caret-blink {
+    to { visibility: hidden; }
+}
+
+/* ── Pricing ───────────────────────────────────────────────────────────── */
+
+/*
+    Both prices are in the markup, so the toggle is a class change rather
+    than a re-render and it costs no layout shift.
+*/
+[data-period="monthly"] .price-yearly,
+[data-period="yearly"] .price-monthly {
+    display: none;
+}
+
+/* ── FAQ ───────────────────────────────────────────────────────────────── */
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details .faq-answer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s var(--ease-glide);
+}
+
+details[open] .faq-answer {
+    grid-template-rows: 1fr;
+}
+
+details .faq-answer > * {
+    overflow: hidden;
+}
+
+details[open] .faq-chevron {
+    rotate: 180deg;
+}
+
+.faq-chevron {
+    transition: rotate 0.25s var(--ease-glide);
+}
+
+/* ── Scroll reveals ────────────────────────────────────────────────────── */
+
+/*
+    Elements marked data-reveal fade and rise once as they scroll into view,
+    and only when JavaScript is present — without it nothing is ever hidden.
+*/
+html.js [data-reveal] {
+    opacity: 0;
+    translate: 0 0.625rem;
+    transition:
+        opacity 0.7s var(--ease-glide),
+        translate 0.7s var(--ease-glide);
+}
+
+html.js [data-reveal].is-visible {
+    opacity: 1;
+    translate: 0 0;
+}
+
+/* Grids stagger their children by position; nothing is computed per item. */
+html.js .stagger > *:nth-child(2) {
+    transition-delay: 0.07s;
+}
+
+html.js .stagger > *:nth-child(3) {
+    transition-delay: 0.14s;
+}
+
+html.js .stagger > *:nth-child(4) {
+    transition-delay: 0.21s;
+}
+
+html.js .stagger > *:nth-child(5) {
+    transition-delay: 0.28s;
+}
+
+html.js .stagger > *:nth-child(6) {
+    transition-delay: 0.35s;
+}
+
+/* ── Prose ─────────────────────────────────────────────────────────────── */
+
+/*
+    Posts and stories arrive as raw HTML from their collection, so the
+    reading styles live here rather than on each tag. The measure is set in
+    the markup with max-w-[*ch], never here.
+*/
+.prose {
+    color: var(--color-lede);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.prose > * + * {
+    margin-top: 1.3em;
+}
+
+.prose h2,
+.prose h3,
+.prose h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+
+.prose h2 {
+    font-size: 1.625rem;
+    line-height: 1.2;
+    margin-top: 2.25em;
+}
+
+.prose h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-top: 1.75em;
+}
+
+.prose h2 + *,
+.prose h3 + * {
+    margin-top: 0.75em;
+}
+
+.prose strong {
+    color: var(--color-ink);
+    font-weight: 600;
+}
+
+.prose a {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent-soft);
+    text-underline-offset: 3px;
+}
+
+.prose a:hover {
+    text-decoration-color: var(--color-accent-text);
+}
+
+.prose ul,
+.prose ol {
+    padding-left: 1.5rem;
+}
+
+.prose ul {
+    list-style: disc;
+}
+
+.prose ol {
+    list-style: decimal;
+}
+
+.prose li + li {
+    margin-top: 0.5em;
+}
+
+.prose li::marker {
+    color: var(--color-faint);
+}
+
+/* A pull-quote is where the serif earns its place. */
+.prose blockquote {
+    font-family: var(--font-serif);
+    border-left: 1px solid var(--color-line-strong);
+    padding-left: 1.5rem;
+    color: var(--color-ink);
+    font-size: 1.375rem;
+    line-height: 1.5;
+}
+
+.prose code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.875em;
+    color: var(--color-ink);
+    background-color: var(--color-well);
+    border-radius: 4px;
+    padding: 0.125rem 0.375rem;
+}
+
+.prose pre {
+    background-color: var(--color-note-midnight);
+    color: #cfd6ea;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.7;
+}
+
+.prose pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+}
+
+.prose img {
+    border-radius: 12px;
+    outline: 1px solid var(--color-line);
+    outline-offset: -1px;
+}
+
+.prose hr {
+    border: 0;
+    border-top: 1px solid var(--color-line);
+    margin: 3em 0;
+}
+
+/* ── Reduced motion ────────────────────────────────────────────────────── */
+
+/*
+    Everything above resolves to its resting, fully visible state. No reveal
+    ever leaves content hidden, the rail's chips are simply attached, and
+    the caret stops blinking.
+*/
+@media (prefers-reduced-motion: reduce) {
+    html.js [data-reveal] {
+        opacity: 1;
+        translate: 0 0;
+        transition: none;
+    }
+
+    html.js .rail-item::before {
+        scale: 1 1;
+        transition: none;
+    }
+
+    html.js .rail-item .rail-chip {
+        opacity: 1;
+        translate: 0 0;
+        transition: none;
+    }
+
+    .caret {
+        animation: none;
+    }
+
+    .nav-menu,
+    .nav-chevron,
+    .faq-chevron,
+    details .faq-answer {
+        transition: none;
+    }
+}

@@ -1,0 +1,26 @@
+# The visual editor's contract for sections/page-header.blade.php.
+title: Page header
+description: The title and opening line of an inner page
+fields:
+    heading:
+        type: text
+        label: Title
+        default: "A page title"
+    body:
+        type: textarea
+        label: Opening line
+        description: Leave empty to hide it.
+        rows: 3
+        default: ""
+    showCta:
+        type: toggle
+        label: Show a button
+        default: "0"
+    ctaText:
+        type: text
+        label: Button text
+        default: "Start free"
+    ctaLink:
+        type: url
+        label: Button link
+        default: "#"

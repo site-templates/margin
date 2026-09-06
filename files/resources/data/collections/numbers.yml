@@ -1,0 +1,6 @@
+# Column types for numbers.json — the divided stat row.
+fields:
+    value:
+        type: text
+    label:
+        type: text

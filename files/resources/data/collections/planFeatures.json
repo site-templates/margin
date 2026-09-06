@@ -1,0 +1,16 @@
+[
+    { "plan": "free", "text": "Up to 10 people" },
+    { "plan": "free", "text": "Unlimited pages and notes" },
+    { "plan": "free", "text": "50 agent runs a month" },
+    { "plan": "free", "text": "Slack and GitHub" },
+    { "plan": "team", "text": "Everything in Free" },
+    { "plan": "team", "text": "Unlimited people" },
+    { "plan": "team", "text": "1,000 agent runs a month" },
+    { "plan": "team", "text": "Every connection" },
+    { "plan": "team", "text": "Version history for a year" },
+    { "plan": "business", "text": "Everything in Team" },
+    { "plan": "business", "text": "Unlimited agent runs" },
+    { "plan": "business", "text": "SAML and SCIM" },
+    { "plan": "business", "text": "Audit log and data residency" },
+    { "plan": "business", "text": "A named support engineer" }
+]

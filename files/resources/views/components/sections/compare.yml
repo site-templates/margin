@@ -1,0 +1,43 @@
+# The visual editor's contract for sections/compare.blade.php.
+title: Plan comparison
+description: The three plans side by side, one row per feature
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Every difference, in one table."
+    columnOne:
+        type: text
+        label: First column
+        default: "Free"
+    columnTwo:
+        type: text
+        label: Second column
+        default: "Team"
+    columnThree:
+        type: text
+        label: Third column
+        default: "Business"
+    items:
+        type: repeater
+        label: Rows
+        source: collections.compare
+        add_button_label: "Add row"
+        item_label: feature
+        sub_fields:
+            feature:
+                type: text
+                label: Feature
+                default: "A feature"
+            free:
+                type: text
+                label: First column value
+                default: "—"
+            team:
+                type: text
+                label: Second column value
+                default: "—"
+            business:
+                type: text
+                label: Third column value
+                default: "—"

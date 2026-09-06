@@ -1,0 +1,7 @@
+[
+    { "text": "Slack", "detail": "Threads become notes", "note": "coral", "state": "Connected" },
+    { "text": "GitHub", "detail": "PRs close their notes", "note": "sky", "state": "Connected" },
+    { "text": "Linear", "detail": "Issues sync both ways", "note": "amber", "state": "Connected" },
+    { "text": "Figma", "detail": "Frames embed live", "note": "midnight", "state": "Connected" },
+    { "text": "Zendesk", "detail": "Tickets find the runbook", "note": "sky", "state": "Add" }
+]

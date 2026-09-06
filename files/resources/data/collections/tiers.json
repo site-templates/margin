@@ -1,0 +1,35 @@
+[
+    {
+        "slug": "free",
+        "name": "Free",
+        "description": "For a team getting the habit.",
+        "monthly": "$0",
+        "yearly": "$0",
+        "unit": "forever",
+        "ctaText": "Start free",
+        "ctaLink": "#",
+        "popular": false
+    },
+    {
+        "slug": "team",
+        "name": "Team",
+        "description": "For teams that ship every week.",
+        "monthly": "$12",
+        "yearly": "$10",
+        "unit": "per person, per month",
+        "ctaText": "Start free trial",
+        "ctaLink": "#",
+        "popular": true
+    },
+    {
+        "slug": "business",
+        "name": "Business",
+        "description": "For companies with a compliance team.",
+        "monthly": "$22",
+        "yearly": "$18",
+        "unit": "per person, per month",
+        "ctaText": "Book a demo",
+        "ctaLink": "#",
+        "popular": false
+    }
+]

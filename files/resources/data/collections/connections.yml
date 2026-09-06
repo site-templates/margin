@@ -1,0 +1,10 @@
+# Column types for connections.json — the integrations drawing.
+fields:
+    text:
+        type: text
+    detail:
+        type: text
+    note:
+        type: text
+    state:
+        type: text

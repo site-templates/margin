@@ -1,0 +1,9 @@
+[
+    { "glyph": "rule", "note": "sky" },
+    { "glyph": "check", "note": "amber" },
+    { "glyph": "pen", "note": "coral" },
+    { "glyph": "spark", "note": "midnight" },
+    { "glyph": "page", "note": "sky" },
+    { "glyph": "chat", "note": "amber" },
+    { "glyph": "clock", "note": "coral" }
+]

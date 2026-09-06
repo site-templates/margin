@@ -1,0 +1,118 @@
+# The visual editor's contract for mocks/workspace.blade.php.
+# The window is drawn in markup, so every string in it is a real field and
+# the three lists come from their own collections.
+title: Workspace window
+description: The drawn Margin app — sidebar, a document with notes in its margin, and the agent panel
+fields:
+    tabLabel:
+        type: text
+        label: Tab label
+        default: "Q3 launch brief"
+    workspace:
+        type: text
+        label: Sidebar heading
+        default: "Margin HQ"
+    docTitle:
+        type: text
+        label: Document title
+        default: "Q3 launch brief"
+    docLead:
+        type: textarea
+        label: Opening paragraph
+        rows: 4
+        default: "We ship the margin rail on the 14th. Everything below is what has to be true by then — write straight into it, and leave a note wherever you want help."
+    docHeading:
+        type: text
+        label: Checklist heading
+        default: "Before we ship"
+    agentName:
+        type: text
+        label: Agent name
+        default: "Release agent"
+    agentStatus:
+        type: text
+        label: Agent status
+        default: "Working"
+    agentMessage:
+        type: textarea
+        label: Agent message
+        rows: 4
+        default: "I picked up Dara’s note. The 2.4 changelog is drafted from the three merged PRs and it reads clean. Publish it?"
+    agentSource:
+        type: text
+        label: Agent source line
+        default: "Reading: Q3 launch brief"
+    pages:
+        type: repeater
+        label: Sidebar pages
+        source: collections.pages
+        add_button_label: "Add page"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Title
+                default: "New page"
+            note:
+                type: select
+                label: Dot colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+            active:
+                type: toggle
+                label: Open
+                description: The row that reads as the page you are on.
+                default: "0"
+    tasks:
+        type: repeater
+        label: Checklist
+        source: collections.tasks
+        add_button_label: "Add task"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Task
+                default: "New task"
+            state:
+                type: select
+                label: State
+                default: "todo"
+                options:
+                    todo: To do
+                    doing: In progress
+                    done: Done
+            owner:
+                type: text
+                label: Owner
+                default: "Wren"
+    notes:
+        type: repeater
+        label: Margin notes
+        description: The first three are pinned beside the document. Adding more has no effect on the drawing.
+        source: collections.notes
+        add_button_label: "Add note"
+        item_label: author
+        sub_fields:
+            text:
+                type: textarea
+                label: Note
+                rows: 3
+                default: "A new note"
+            author:
+                type: text
+                label: Written by
+                default: "Priya"
+            note:
+                type: select
+                label: Colour
+                default: "amber"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight

@@ -1,0 +1,37 @@
+# The visual editor's contract for sections/changelog.blade.php.
+# Entries live in the changelog collection; the body is rich text.
+title: Changelog
+description: Released versions, the version and date out in the margin
+fields:
+    items:
+        type: repeater
+        label: Entries
+        source: collections.changelog
+        add_button_label: "Add entry"
+        item_label: version
+        sub_fields:
+            version:
+                type: text
+                label: Version
+                default: "1.0"
+            dateFormatted:
+                type: text
+                label: Date
+                default: "1 January 2026"
+            title:
+                type: text
+                label: Title
+                default: "What shipped"
+            note:
+                type: select
+                label: Accent
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+            content:
+                type: richtext
+                label: The entry
+                default: "<p>What changed for the person reading.</p>"

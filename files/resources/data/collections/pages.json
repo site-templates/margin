@@ -1,0 +1,7 @@
+[
+    { "text": "Q3 launch brief", "note": "amber", "active": true },
+    { "text": "Support playbook", "note": "sky", "active": false },
+    { "text": "Hiring loop", "note": "coral", "active": false },
+    { "text": "Design review notes", "note": "midnight", "active": false },
+    { "text": "Weekly sync", "note": "sky", "active": false }
+]

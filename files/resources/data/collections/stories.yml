@@ -1,0 +1,36 @@
+# Column types for stories.json — the source of truth the builder reads.
+fields:
+    slug:
+        type: text
+    company:
+        type: text
+    title:
+        type: text
+    description:
+        type: textarea
+    logo:
+        type: image
+    industry:
+        type: text
+    size:
+        type: text
+    using:
+        type: text
+    metricValue:
+        type: text
+    metricLabel:
+        type: text
+    link:
+        type: url
+    note:
+        type: text
+    quote:
+        type: textarea
+    quoteName:
+        type: text
+    quoteRole:
+        type: text
+    quoteAvatar:
+        type: image
+    content:
+        type: richtext

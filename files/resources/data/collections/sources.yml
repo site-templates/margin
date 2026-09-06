@@ -1,0 +1,6 @@
+# Column types for sources.json — what feeds into a page in the first panel.
+fields:
+    text:
+        type: text
+    note:
+        type: text

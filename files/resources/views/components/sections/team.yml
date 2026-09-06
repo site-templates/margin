@@ -1,0 +1,44 @@
+# The visual editor's contract for sections/team.blade.php.
+title: The team
+description: Photographs, names, and one line each
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Twenty-nine people, one page."
+    body:
+        type: textarea
+        label: Sentence under the heading
+        rows: 3
+        default: "We are small on purpose and write far more than a company this size normally does."
+    linkText:
+        type: text
+        label: Link text
+        default: "See the open roles"
+    link:
+        type: url
+        label: Link
+        default: "#"
+    items:
+        type: repeater
+        label: People
+        source: collections.team
+        add_button_label: "Add person"
+        item_label: name
+        sub_fields:
+            name:
+                type: text
+                label: Name
+                default: "New person"
+            role:
+                type: text
+                label: Role
+                default: "Their job"
+            line:
+                type: text
+                label: One line
+                default: "Something true about them."
+            avatar:
+                type: image
+                label: Photo
+                default: "https://assets.ui.sh/avatars/5.webp?size=200"

@@ -1,0 +1,24 @@
+# The visual editor's contract for sections/faq.blade.php.
+title: Questions
+description: The questions people ask before they sign up
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "The questions people actually ask."
+    items:
+        type: repeater
+        label: Questions
+        source: collections.faq
+        add_button_label: "Add question"
+        item_label: question
+        sub_fields:
+            question:
+                type: text
+                label: Question
+                default: "A question"
+            answer:
+                type: textarea
+                label: Answer
+                rows: 5
+                default: "The answer."

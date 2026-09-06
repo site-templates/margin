@@ -1,0 +1,16 @@
+# Column types for showcase.json — the painted panels under the logo wall.
+fields:
+    title:
+        type: text
+    body:
+        type: textarea
+    linkText:
+        type: text
+    link:
+        type: url
+    note:
+        type: text
+    mock:
+        type: text
+    wide:
+        type: toggle

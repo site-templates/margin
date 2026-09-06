@@ -1,0 +1,10 @@
+[
+    { "name": "Align", "image": "https://assets.ui.sh/logos/align.svg?color=%23141310" },
+    { "name": "Artifact", "image": "https://assets.ui.sh/logos/artifact.svg?color=%23141310" },
+    { "name": "Axiom", "image": "https://assets.ui.sh/logos/axiom.svg?color=%23141310" },
+    { "name": "Concise", "image": "https://assets.ui.sh/logos/concise.svg?color=%23141310" },
+    { "name": "Looply", "image": "https://assets.ui.sh/logos/looply.svg?color=%23141310" },
+    { "name": "Orbital", "image": "https://assets.ui.sh/logos/orbital.svg?color=%23141310" },
+    { "name": "Pine Labs", "image": "https://assets.ui.sh/logos/pinelabs.svg?color=%23141310" },
+    { "name": "Relay", "image": "https://assets.ui.sh/logos/relay.svg?color=%23141310" }
+]

@@ -1,0 +1,154 @@
+# The visual editor's contract for mocks/panel.blade.php.
+# Only the fields belonging to the chosen drawing appear on the page; the
+# rest sit unused until you switch it.
+title: Panel drawing
+description: The drawing inside a painted panel — sources, search, or a board
+fields:
+    mock:
+        type: select
+        label: Drawing
+        default: "sources"
+        options:
+            sources: Sources folding into a page
+            notes: A note in a document's margin
+            agent: An agent's finished run
+            search: Search with its citation
+            board: A board of notes
+            connections: Connected apps
+    pageTitle:
+        type: text
+        label: Page title
+        description: Sources drawing only.
+        default: "Q3 launch brief"
+    pageLine:
+        type: textarea
+        label: Page line
+        description: Sources drawing only.
+        rows: 2
+        default: "Everything that has to be true before the 14th, and who owns it."
+    searchQuery:
+        type: text
+        label: Question
+        description: Search drawing only.
+        default: "why did we move pricing to usage?"
+    searchAnswer:
+        type: textarea
+        label: Answer
+        description: Search drawing only.
+        rows: 3
+        default: "Because seats punished the teams inviting the most people. Usage tracks the value they actually get."
+    searchCitation:
+        type: text
+        label: Citation
+        description: Search drawing only.
+        default: "Pricing rewrite · line 14"
+    sources:
+        type: repeater
+        label: Sources
+        description: Sources drawing only.
+        source: collections.sources
+        add_button_label: "Add source"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Source
+                default: "A new source"
+            note:
+                type: select
+                label: Colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+    board:
+        type: repeater
+        label: Board cards
+        description: Board drawing only. The column must read To do, Doing or Done.
+        source: collections.board
+        add_button_label: "Add card"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Card
+                default: "A new card"
+            column:
+                type: select
+                label: Column
+                default: "To do"
+                options:
+                    To do: To do
+                    Doing: Doing
+                    Done: Done
+            note:
+                type: select
+                label: Colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+    noteText:
+        type: textarea
+        label: The note
+        description: Margin-note drawing only.
+        rows: 2
+        default: "This paragraph is doing two jobs. Split it."
+    noteAuthor:
+        type: text
+        label: Note byline
+        description: Margin-note drawing only.
+        default: "Priya"
+    noteBody:
+        type: textarea
+        label: The paragraph it sits beside
+        description: Margin-note drawing only.
+        rows: 4
+        default: "Usage pricing means a team of forty pays for what forty people actually did, not for forty seats. It is the only model that does not punish you for inviting the person who needed to read it."
+    agentName:
+        type: text
+        label: Agent name
+        description: Agent-run drawing only.
+        default: "Support agent"
+    agentLine:
+        type: textarea
+        label: What it did
+        description: Agent-run drawing only.
+        rows: 3
+        default: "Answered 14 tickets from the runbook. Three needed a person — they are in your inbox with the context attached."
+    connections:
+        type: repeater
+        label: Connected apps
+        description: Connections drawing only.
+        source: collections.connections
+        add_button_label: "Add app"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: App
+                default: "New app"
+            detail:
+                type: text
+                label: What it does
+                default: "What syncs"
+            note:
+                type: select
+                label: Colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+            state:
+                type: select
+                label: State
+                default: "Connected"
+                options:
+                    Connected: Connected
+                    Add: Not connected

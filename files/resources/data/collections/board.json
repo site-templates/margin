@@ -1,0 +1,7 @@
+[
+    { "text": "Rewrite pricing headline", "column": "To do", "note": "amber" },
+    { "text": "Security review", "column": "To do", "note": "sky" },
+    { "text": "Ship the margin rail", "column": "Doing", "note": "coral" },
+    { "text": "Draft the 2.4 changelog", "column": "Doing", "note": "midnight" },
+    { "text": "Migrate the old notes", "column": "Done", "note": "sky" }
+]

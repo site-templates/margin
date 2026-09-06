@@ -1,0 +1,89 @@
+# The visual editor's contract for sections/stories.blade.php.
+# Stories live in the stories collection — each one also gets its own page
+# at /customers/{slug}.
+title: Customer stories
+description: One painted panel per story, with the figure that mattered
+fields:
+    items:
+        type: repeater
+        label: Stories
+        source: collections.stories
+        add_button_label: "Add story"
+        item_label: company
+        sub_fields:
+            slug:
+                type: text
+                label: Slug
+                description: The URL is /customers/{slug} — keep the link field in step with it.
+                default: "a-new-story"
+            company:
+                type: text
+                label: Company
+                default: "New company"
+            title:
+                type: text
+                label: Headline
+                default: "What changed for them"
+            description:
+                type: textarea
+                label: Standfirst
+                rows: 3
+                default: "The short version."
+            logo:
+                type: image
+                label: Wordmark
+                default: "https://assets.ui.sh/logos/orbital.svg?color=%23141310"
+            industry:
+                type: text
+                label: Industry
+                default: "Software"
+            size:
+                type: text
+                label: Size
+                default: "100 people"
+            using:
+                type: text
+                label: Using
+                default: "Docs, agents"
+            metricValue:
+                type: text
+                label: The figure
+                default: "2x"
+            metricLabel:
+                type: text
+                label: What the figure counts
+                default: "what it measures"
+            link:
+                type: url
+                label: Link
+                default: "/customers/a-new-story"
+            note:
+                type: select
+                label: Panel colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+            quote:
+                type: textarea
+                label: Quote
+                rows: 4
+                default: "What they said."
+            quoteName:
+                type: text
+                label: Who said it
+                default: "New person"
+            quoteRole:
+                type: text
+                label: Their role
+                default: "Their job"
+            quoteAvatar:
+                type: image
+                label: Their photo
+                default: "https://assets.ui.sh/avatars/3.webp?size=96"
+            content:
+                type: richtext
+                label: The story
+                default: "<p>Write the story here.</p>"

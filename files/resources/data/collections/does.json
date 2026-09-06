@@ -1,0 +1,8 @@
+[
+    { "text": "Triage the inbox", "detail": "Every message read, sorted and answered where the answer is already written down.", "note": "sky" },
+    { "text": "Write the changelog", "detail": "From the pull requests that actually shipped, in the voice the last ten entries used.", "note": "coral" },
+    { "text": "Keep the docs honest", "detail": "Flags the page that contradicts the one you just changed, before a customer finds it.", "note": "amber" },
+    { "text": "Answer the same question", "detail": "The eleventh time somebody asks where the runbook is, it answers instead of you.", "note": "midnight" },
+    { "text": "Chase the sign-off", "detail": "Knows who owns the decision, asks them once, and closes the note when they reply.", "note": "sky" },
+    { "text": "Summarise the week", "detail": "One page on Friday: what moved, what slipped, and the note nobody picked up.", "note": "coral" }
+]

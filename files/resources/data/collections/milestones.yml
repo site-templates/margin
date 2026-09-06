@@ -1,0 +1,8 @@
+# Column types for milestones.json — the source of truth the builder reads.
+fields:
+    year:
+        type: text
+    text:
+        type: textarea
+    note:
+        type: text

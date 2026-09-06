@@ -1,0 +1,23 @@
+# The visual editor's contract for sections/logos.blade.php.
+title: Logo wall
+description: One line of context and the customer wordmarks
+fields:
+    caption:
+        type: text
+        label: Caption
+        default: "Written in every day at"
+    items:
+        type: repeater
+        label: Logos
+        source: collections.logos
+        add_button_label: "Add logo"
+        item_label: name
+        sub_fields:
+            name:
+                type: text
+                label: Company
+                default: "New company"
+            image:
+                type: image
+                label: Wordmark
+                default: "https://assets.ui.sh/logos/align.svg?color=%23141310"

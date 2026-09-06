@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Dara Okonjo",
+        "role": "Co-founder",
+        "line": "Wrote the first note object on a train.",
+        "avatar": "https://assets.ui.sh/avatars/2.webp?size=200"
+    },
+    {
+        "name": "Wren Adeyemi",
+        "role": "Co-founder",
+        "line": "Killed seat pricing, twice.",
+        "avatar": "https://assets.ui.sh/avatars/1.webp?size=200"
+    },
+    {
+        "name": "Priya Raman",
+        "role": "Engineering",
+        "line": "Built the step log before the agent.",
+        "avatar": "https://assets.ui.sh/avatars/5.webp?size=200"
+    },
+    {
+        "name": "Sasha Merrin",
+        "role": "Design",
+        "line": "Owns the margin, literally.",
+        "avatar": "https://assets.ui.sh/avatars/16.webp?size=200"
+    },
+    {
+        "name": "Ari Vance",
+        "role": "Infrastructure",
+        "line": "Keeps the answers under 200ms.",
+        "avatar": "https://assets.ui.sh/avatars/13.webp?size=200"
+    },
+    {
+        "name": "Rowan Ellery",
+        "role": "Operations",
+        "line": "Ran the eleven-minute sync first.",
+        "avatar": "https://assets.ui.sh/avatars/3.webp?size=200"
+    },
+    {
+        "name": "Nadia Boulos",
+        "role": "Support",
+        "line": "Answers before the agent does.",
+        "avatar": "https://assets.ui.sh/avatars/10.webp?size=200"
+    },
+    {
+        "name": "Theo Lindqvist",
+        "role": "Security",
+        "line": "Reads every audit log for fun.",
+        "avatar": "https://assets.ui.sh/avatars/8.webp?size=200"
+    }
+]

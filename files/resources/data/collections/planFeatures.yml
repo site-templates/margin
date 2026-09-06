@@ -1,0 +1,6 @@
+# Column types for planFeatures.json — one row per bullet, tagged with its plan.
+fields:
+    plan:
+        type: text
+    text:
+        type: text

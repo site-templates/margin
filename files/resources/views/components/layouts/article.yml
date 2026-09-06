@@ -1,0 +1,90 @@
+# The visual editor's contract for layouts/article.blade.php.
+# Everything here comes from the entry's own row in its collection — edit a
+# post or a story in the content editor rather than on the canvas.
+title: Reading layout
+description: The shared post and story layout — the margin on the left, the writing on the right
+fields:
+    title:
+        type: text
+        label: Title
+        default: "An article"
+    description:
+        type: textarea
+        label: Standfirst
+        rows: 3
+        default: ""
+    kicker:
+        type: text
+        label: Category chip
+        default: ""
+    kickerLink:
+        type: url
+        label: Category link
+        default: "#"
+    dateLabel:
+        type: text
+        label: First label
+        default: "Published"
+    dateFormatted:
+        type: text
+        label: First value
+        default: ""
+    lengthLabel:
+        type: text
+        label: Second label
+        default: "Length"
+    readTime:
+        type: text
+        label: Second value
+        default: ""
+    authorLabel:
+        type: text
+        label: Third label
+        default: "Written by"
+    author:
+        type: text
+        label: Person
+        default: ""
+    roleLabel:
+        type: text
+        label: Fourth label
+        default: "Role"
+    authorRole:
+        type: text
+        label: Their role
+        default: ""
+    authorAvatar:
+        type: image
+        label: Author photo
+        default: ""
+    note:
+        type: select
+        label: Accent
+        default: "amber"
+        options:
+            amber: Amber
+            coral: Coral
+            sky: Sky
+            midnight: Midnight
+    currentLink:
+        type: url
+        label: This page's own link
+        description: The entry with this link is left out of the related list.
+        default: ""
+    backText:
+        type: text
+        label: Back link text
+        default: "All posts"
+    backLink:
+        type: url
+        label: Back link
+        default: "/blog"
+    moreHeading:
+        type: text
+        label: Heading over the related list
+        description: Leave empty to hide the list.
+        default: "More from the blog"
+    current:
+        type: text
+        label: Current page path
+        default: "/blog"

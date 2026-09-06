@@ -1,0 +1,16 @@
+# Column types for voices.json — the painted quote cards.
+fields:
+    quote:
+        type: textarea
+    name:
+        type: text
+    role:
+        type: text
+    company:
+        type: text
+    logo:
+        type: image
+    avatar:
+        type: image
+    note:
+        type: text

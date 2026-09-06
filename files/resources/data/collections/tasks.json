@@ -1,0 +1,6 @@
+[
+    { "text": "Rewrite the pricing page headline", "state": "done", "owner": "Wren" },
+    { "text": "Ship the margin rail to staging", "state": "doing", "owner": "Dara" },
+    { "text": "Changelog entry for 2.4", "state": "doing", "owner": "Agent" },
+    { "text": "Security review sign-off", "state": "todo", "owner": "Priya" }
+]

@@ -1,0 +1,28 @@
+# Column types for posts.json — the source of truth the builder reads.
+fields:
+    slug:
+        type: text
+    title:
+        type: text
+    description:
+        type: textarea
+    category:
+        type: text
+    dateFormatted:
+        type: text
+    readTime:
+        type: text
+    author:
+        type: text
+    authorRole:
+        type: text
+    authorAvatar:
+        type: image
+    link:
+        type: url
+    note:
+        type: text
+    featured:
+        type: toggle
+    content:
+        type: richtext

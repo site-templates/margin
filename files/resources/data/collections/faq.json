@@ -1,0 +1,8 @@
+[
+    { "question": "What counts as an agent run?", "answer": "One note picked up and worked to a result. Reading the page, pulling the sources and writing the draft is a single run, however many steps it takes. Runs that fail do not count." },
+    { "question": "Can we start free and move up later?", "answer": "Yes, and nothing is re-imported. The pages, the notes and the version history you built on Free are the same objects on Team — you are only lifting the limits." },
+    { "question": "Where does our writing live?", "answer": "In Frankfurt, Virginia or Sydney, whichever you choose on Business. Free and Team sit in Virginia. Nothing you write is used to train a model, on any plan." },
+    { "question": "Do agents need our source code?", "answer": "Only the repositories you connect, and only the parts of them you point at. An agent can read a pull request title and diff without ever cloning the repo." },
+    { "question": "What happens when someone leaves?", "answer": "Their notes stay where they were written, their name stays on them, and their seat frees up on the next invoice rather than at the end of the year." },
+    { "question": "Is there a discount for non-profits?", "answer": "Team is free for registered non-profits and for classrooms. Write to us from the organisation's own address and we will switch it over the same day." }
+]

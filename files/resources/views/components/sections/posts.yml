@@ -1,0 +1,72 @@
+# The visual editor's contract for sections/posts.blade.php.
+# Posts live in the posts collection — the one marked featured takes the
+# painted panel at the top.
+title: Blog index
+description: The featured post and the grid beneath it
+fields:
+    items:
+        type: repeater
+        label: Posts
+        source: collections.posts
+        add_button_label: "Add post"
+        item_label: title
+        sub_fields:
+            slug:
+                type: text
+                label: Slug
+                description: The URL is /blog/{slug} — keep the link field in step with it.
+                default: "a-new-post"
+            title:
+                type: text
+                label: Title
+                default: "A new post"
+            description:
+                type: textarea
+                label: Standfirst
+                rows: 3
+                default: "What the post is about."
+            category:
+                type: text
+                label: Category
+                default: "Product"
+            dateFormatted:
+                type: text
+                label: Published
+                default: "1 January 2026"
+            readTime:
+                type: text
+                label: Length
+                default: "5 min read"
+            author:
+                type: text
+                label: Author
+                default: "New author"
+            authorRole:
+                type: text
+                label: Author role
+                default: "Their job"
+            authorAvatar:
+                type: image
+                label: Author photo
+                default: "https://assets.ui.sh/avatars/5.webp?size=96"
+            link:
+                type: url
+                label: Link
+                default: "/blog/a-new-post"
+            note:
+                type: select
+                label: Accent
+                default: "amber"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
+            featured:
+                type: toggle
+                label: Feature this post
+                default: "0"
+            content:
+                type: richtext
+                label: The post
+                default: "<p>Write the post here.</p>"

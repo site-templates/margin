@@ -1,0 +1,8 @@
+# Column types for notes.json — the notes pinned in the document's margin.
+fields:
+    text:
+        type: textarea
+    author:
+        type: text
+    note:
+        type: text

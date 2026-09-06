@@ -1,0 +1,8 @@
+# Column types for values.json — the source of truth the builder reads.
+fields:
+    text:
+        type: text
+    detail:
+        type: textarea
+    note:
+        type: text

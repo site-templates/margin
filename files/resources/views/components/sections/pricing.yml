@@ -1,0 +1,83 @@
+# The visual editor's contract for sections/pricing.blade.php.
+# Bullets live in the planFeatures collection, one row per bullet, tagged
+# with the plan slug it belongs to.
+title: Pricing
+description: The billing toggle and the three plans
+fields:
+    monthlyLabel:
+        type: text
+        label: Monthly label
+        default: "Monthly"
+    yearlyLabel:
+        type: text
+        label: Yearly label
+        default: "Yearly"
+    saveLabel:
+        type: text
+        label: Saving note
+        default: "Two months free"
+    popularLabel:
+        type: text
+        label: Emphasis line
+        description: Shown on the plan marked popular.
+        default: "Most teams start here"
+    tiers:
+        type: repeater
+        label: Plans
+        source: collections.tiers
+        add_button_label: "Add plan"
+        item_label: name
+        sub_fields:
+            slug:
+                type: text
+                label: Slug
+                description: Bullets in planFeatures with this plan value appear on this card.
+                default: "new-plan"
+            name:
+                type: text
+                label: Name
+                default: "New plan"
+            description:
+                type: textarea
+                label: Who it is for
+                rows: 2
+                default: "For a kind of team."
+            monthly:
+                type: text
+                label: Monthly price
+                default: "$0"
+            yearly:
+                type: text
+                label: Yearly price
+                default: "$0"
+            unit:
+                type: text
+                label: Price unit
+                default: "per person, per month"
+            ctaText:
+                type: text
+                label: Button text
+                default: "Start free"
+            ctaLink:
+                type: url
+                label: Button link
+                default: "#"
+            popular:
+                type: toggle
+                label: Emphasise this plan
+                default: "0"
+    planFeatures:
+        type: repeater
+        label: Plan bullets
+        source: collections.planFeatures
+        add_button_label: "Add bullet"
+        item_label: text
+        sub_fields:
+            plan:
+                type: text
+                label: Plan slug
+                default: "free"
+            text:
+                type: text
+                label: Bullet
+                default: "What you get"

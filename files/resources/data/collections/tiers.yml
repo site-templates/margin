@@ -1,0 +1,20 @@
+# Column types for tiers.json — the three pricing plans.
+fields:
+    slug:
+        type: text
+    name:
+        type: text
+    description:
+        type: textarea
+    monthly:
+        type: text
+    yearly:
+        type: text
+    unit:
+        type: text
+    ctaText:
+        type: text
+    ctaLink:
+        type: url
+    popular:
+        type: toggle

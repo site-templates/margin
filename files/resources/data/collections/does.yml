@@ -1,0 +1,8 @@
+# Column types for does.json — the chips pinned to the margin rail.
+fields:
+    text:
+        type: text
+    detail:
+        type: textarea
+    note:
+        type: text

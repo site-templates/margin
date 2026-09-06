@@ -1,0 +1,22 @@
+{
+    "name": "Margin",
+    "dialect": "blade",
+    "description": "A warm-paper workspace site for an AI product — a marker-swiped hero over a drawn app window, painted note-card panels, the margin rail as the page's spine, customer stories, pricing, a blog and a changelog.",
+    "icon": "▍",
+    "repo": "https://github.com/site-templates/margin",
+    "order": 50,
+    "category": "landing",
+    "theme": "light",
+    "accent": "#0075de",
+    "pages": [
+        "Home",
+        "Product",
+        "Pricing",
+        "Customers",
+        "Customer story",
+        "Blog",
+        "Blog post",
+        "Changelog",
+        "About"
+    ]
+}

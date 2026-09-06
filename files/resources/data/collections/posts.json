@@ -1,0 +1,62 @@
+[
+    {
+        "slug": "the-note-is-the-unit-of-work",
+        "title": "The note is the unit of work",
+        "description": "Every tool we tried made you retype the thought before anyone could act on it. So we made the thought itself the thing you assign.",
+        "category": "Product",
+        "dateFormatted": "14 October 2026",
+        "readTime": "6 min read",
+        "author": "Dara Okonjo",
+        "authorRole": "Co-founder",
+        "authorAvatar": "https://assets.ui.sh/avatars/2.webp?size=96",
+        "link": "/blog/the-note-is-the-unit-of-work",
+        "note": "amber",
+        "featured": true,
+        "content": "<p>Watch anyone use a document tool for real work and you will see the same ten seconds happen over and over. They read a paragraph, they know something is wrong with it, and then they stop — because saying so costs more than thinking it.</p>\n<p>They can leave a comment, which nobody will read again. They can open a ticket, which means retyping the paragraph, the context and the reason. Or they can say nothing, which is what most people do most of the time.</p>\n<h2>The retyping tax</h2>\n<p>We measured this at three companies before we wrote a line of Margin. The median time from <em>noticing</em> a problem in a document to <em>filing</em> something a colleague could act on was eleven minutes. Not eleven minutes of work — eleven minutes of translation. Copying the paragraph. Explaining where it came from. Guessing who owns it.</p>\n<p>Nine times out of ten the person gave up before the eleven minutes were done.</p>\n<blockquote>A comment is a thought with nowhere to go. A ticket is a thought that has been retyped by someone who has already lost interest.</blockquote>\n<h2>What a note carries</h2>\n<p>So a note in Margin is not a comment. It is a first-class object that carries four things with it, always:</p>\n<ul>\n<li>the block it was written beside, and every edit that block has had since</li>\n<li>the sources that block cites — the thread, the pull requests, the roadmap item</li>\n<li>who wrote it, and who has read it</li>\n<li>its state, which is <code>open</code> until something closes it</li>\n</ul>\n<p>Because it carries those, a note can be assigned without being retyped. It can appear on a board without being copied. An agent can pick it up and already know what it is about. And when the work lands, the note closes against the paragraph that started it, so the next person to read the page sees the argument as well as the outcome.</p>\n<h2>What changed</h2>\n<p>The number we care about is how many noticed problems become filed work. Before Margin, at the three companies we measured, it was under a fifth. Six months in, it is a little over four fifths.</p>\n<p>The interesting part is not that people file more. It is that they read more carefully, because reading carefully is now worth something. When the cost of saying <em>this is wrong</em> falls to one keystroke, people say it — and the writing gets better long before the agent ever gets involved.</p>"
+    },
+    {
+        "slug": "agents-should-show-their-working",
+        "title": "Agents should show their working",
+        "description": "A draft you cannot audit is a draft you have to redo. We built the step log before we built the agent.",
+        "category": "Engineering",
+        "dateFormatted": "29 September 2026",
+        "readTime": "5 min read",
+        "author": "Priya Raman",
+        "authorRole": "Engineering",
+        "authorAvatar": "https://assets.ui.sh/avatars/5.webp?size=96",
+        "link": "/blog/agents-should-show-their-working",
+        "note": "coral",
+        "featured": false,
+        "content": "<p>The first version of our release agent worked beautifully and nobody used it. It read the note, read the pull requests, wrote a changelog entry that was frankly better than ours, and presented it as a finished thing.</p>\n<p>Every single person edited it from scratch. Not because it was wrong — because they had no way to tell whether it was wrong.</p>\n<h2>Trust is a function of legibility</h2>\n<p>You cannot check a paragraph against your own memory of twelve pull requests. What you can check is a list: it read these three PRs, it skipped that one because it was a revert, it took the wording from the last four entries. Given the list, the paragraph either follows or it does not, and you can tell in four seconds.</p>\n<p>So we rebuilt the agent around its log rather than its output. Every step it takes is a row: what it read, what it decided, what it chose not to do. The draft sits underneath, as the last row.</p>\n<h2>The rule we ended up with</h2>\n<p>An agent may not take an action whose reasoning it cannot show. This sounds obvious and it is expensive: it rules out a whole class of clever shortcuts where a model does five things at once and reports one.</p>\n<p>What it buys is the only thing that matters here. Editing rates on agent drafts went from ninety-four per cent to under a fifth, and the drafts did not get better. They got checkable.</p>\n<h2>What we still get wrong</h2>\n<p>Agents are bad at knowing when a note is not for them. A note that says <em>this feels off</em> is a request for a person, and we ship a version every few weeks that is a little better at leaving those alone. It is the failure mode we watch most closely, because an agent that answers a question nobody asked it costs more attention than it saves.</p>"
+    },
+    {
+        "slug": "we-moved-off-seats",
+        "title": "We moved off seats, and stopped punishing our best customers",
+        "description": "Seat pricing charged the teams who invited the most people. It took us two years to admit that was backwards.",
+        "category": "Company",
+        "dateFormatted": "11 September 2026",
+        "readTime": "4 min read",
+        "author": "Wren Adeyemi",
+        "authorRole": "Co-founder",
+        "authorAvatar": "https://assets.ui.sh/avatars/1.webp?size=96",
+        "link": "/blog/we-moved-off-seats",
+        "note": "sky",
+        "featured": false,
+        "content": "<p>For two years Margin cost a fixed amount per person per month, and for two years our best customers did the same thing: they kept a list of people they had not invited yet.</p>\n<p>Support, legal, the two contractors, the person in finance who needed to read one page a quarter. Every one of them was a decision, and every decision went the same way, because a seat cost the same whether someone wrote a hundred pages or read one.</p>\n<h2>The tool works better with more people in it</h2>\n<p>That is not marketing, it is mechanical. A note is useless if the person who should pick it up is not there. Search is thin if half the company's knowledge never got written down because the author had no account.</p>\n<p>So we had built a product whose value rises with headcount and a price that punished exactly that. The result was predictable and we watched it for two years: our healthiest accounts were the ones bending the rules.</p>\n<h2>What we charge for now</h2>\n<p>Agent runs. One note picked up and worked to a result is one run. Reading the page, pulling the sources and writing the draft is a single run however many steps it takes, and a run that fails does not count.</p>\n<p>Everybody in the company can read, write and leave notes for nothing. You pay when Margin does the work instead of a person, which is the only moment it has clearly saved you something.</p>\n<h2>What happened</h2>\n<p>Median accounts added forty per cent more people in the first quarter. Revenue per account went up, not down, because the extra people wrote things that other people then needed agents for. And our support queue lost its single most common ticket, which was somebody asking whether a read-only seat was cheaper.</p>"
+    },
+    {
+        "slug": "a-changelog-nobody-skips",
+        "title": "How to write a changelog nobody skips",
+        "description": "Ours was a list of merged pull requests. Then we made the agent write it in the house voice, and people started reading it.",
+        "category": "Writing",
+        "dateFormatted": "22 August 2026",
+        "readTime": "4 min read",
+        "author": "Sasha Merrin",
+        "authorRole": "Design",
+        "authorAvatar": "https://assets.ui.sh/avatars/16.webp?size=96",
+        "link": "/blog/a-changelog-nobody-skips",
+        "note": "midnight",
+        "featured": false,
+        "content": "<p>A changelog is the only document most companies publish on a schedule, and it is almost always the worst one they write. Ours was, for years: a bulleted list of merged branch names with the word <em>improvements</em> doing a great deal of heavy lifting.</p>\n<h2>Three rules that fixed it</h2>\n<p>We wrote these down as an actual note pinned to the changelog page, which is how the agent learned them.</p>\n<ol>\n<li><strong>Lead with what somebody can now do.</strong> Not what we built — what changed for the person reading. \"Notes now attach to any block\" is a feature. \"Refactored the note attachment layer\" is a diary entry.</li>\n<li><strong>Name the thing you fixed, not the ticket.</strong> Nobody has your ticket numbers. Everybody has the bug.</li>\n<li><strong>If an entry needs a paragraph, give it a paragraph.</strong> The tyranny of the bullet is why changelogs read like inventory. Some releases deserve four sentences and a screenshot.</li>\n</ol>\n<h2>Letting the agent write it</h2>\n<p>Every entry on our changelog since 2.1 has been drafted by an agent from the pull requests that actually shipped, in the voice of the last ten entries, and then edited by a person for about ninety seconds.</p>\n<p>It is better than what we wrote by hand, for a boring reason: it never runs out of care on a Friday. The last three bullets of a hand-written changelog are always worse than the first three, and the agent's are not.</p>\n<h2>The measurement</h2>\n<p>Open rate on the release email went from eleven per cent to thirty-four. Replies to it — actual humans writing back about a feature — went up by about six times. That is the whole argument for taking a document nobody reads seriously.</p>"
+    }
+]

@@ -1,0 +1,38 @@
+# The visual editor's contract for sections/does.blade.php.
+title: The margin rail
+description: The jobs a team hands over, hung off the rule as notes in a margin
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Six things you stop doing yourself."
+    body:
+        type: textarea
+        label: Sentence under the heading
+        rows: 3
+        default: "Not features. The specific jobs a team hands over in the first fortnight."
+    items:
+        type: repeater
+        label: Notes on the rail
+        source: collections.does
+        add_button_label: "Add note"
+        item_label: text
+        sub_fields:
+            text:
+                type: text
+                label: Title
+                default: "A new job"
+            detail:
+                type: textarea
+                label: One or two lines
+                rows: 3
+                default: "What Margin takes off your plate."
+            note:
+                type: select
+                label: Dot colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight

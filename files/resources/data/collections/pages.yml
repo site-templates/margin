@@ -1,0 +1,8 @@
+# Column types for pages.json — the sidebar rows inside the drawn window.
+fields:
+    text:
+        type: text
+    note:
+        type: text
+    active:
+        type: toggle

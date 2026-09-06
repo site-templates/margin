@@ -1,0 +1,10 @@
+# Column types for team.json — the source of truth the builder reads.
+fields:
+    name:
+        type: text
+    role:
+        type: text
+    line:
+        type: text
+    avatar:
+        type: image

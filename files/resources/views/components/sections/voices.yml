@@ -1,0 +1,51 @@
+# The visual editor's contract for sections/voices.blade.php.
+title: Quote cards
+description: Three painted cards — the company, the quote in the serif, and who said it
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "Teams that write things down."
+    items:
+        type: repeater
+        label: Quotes
+        source: collections.voices
+        add_button_label: "Add quote"
+        item_label: name
+        sub_fields:
+            quote:
+                type: textarea
+                label: Quote
+                rows: 5
+                default: "What they said about it."
+            name:
+                type: text
+                label: Name
+                default: "New person"
+            role:
+                type: text
+                label: Role
+                default: "Their job"
+            company:
+                type: text
+                label: Company
+                description: Read by screen readers on the wordmark.
+                default: "Company"
+            logo:
+                type: image
+                label: Wordmark
+                description: A dark wordmark — the three warm card colours all take ink. A midnight card needs a light one.
+                default: "https://assets.ui.sh/logos/orbital.svg?color=%23141310"
+            avatar:
+                type: image
+                label: Photo
+                default: "https://assets.ui.sh/avatars/3.webp?size=96"
+            note:
+                type: select
+                label: Card colour
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight

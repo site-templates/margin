@@ -1,0 +1,8 @@
+# Column types for tasks.json — the checklist inside the drawn document.
+fields:
+    text:
+        type: text
+    state:
+        type: text
+    owner:
+        type: text

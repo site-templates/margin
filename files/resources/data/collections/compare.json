@@ -1,0 +1,12 @@
+[
+    { "feature": "People", "free": "Up to 10", "team": "Unlimited", "business": "Unlimited" },
+    { "feature": "Pages and notes", "free": "Unlimited", "team": "Unlimited", "business": "Unlimited" },
+    { "feature": "Agent runs", "free": "50 a month", "team": "1,000 a month", "business": "Unlimited" },
+    { "feature": "Version history", "free": "30 days", "team": "1 year", "business": "Forever" },
+    { "feature": "Connections", "free": "Slack, GitHub", "team": "All", "business": "All, plus private" },
+    { "feature": "Search across apps", "free": "—", "team": "Yes", "business": "Yes" },
+    { "feature": "SAML and SCIM", "free": "—", "team": "—", "business": "Yes" },
+    { "feature": "Audit log", "free": "—", "team": "—", "business": "Yes" },
+    { "feature": "Data residency", "free": "—", "team": "—", "business": "EU, US, AU" },
+    { "feature": "Support", "free": "Community", "team": "Same day", "business": "Named engineer" }
+]

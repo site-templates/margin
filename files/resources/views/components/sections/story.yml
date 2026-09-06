@@ -1,0 +1,43 @@
+# The visual editor's contract for sections/story.blade.php.
+title: Our story
+description: Two paragraphs, with the dates out in the margin on the rule
+fields:
+    heading:
+        type: text
+        label: Heading
+        default: "How we got here."
+    bodyOne:
+        type: textarea
+        label: First paragraph
+        rows: 5
+        default: "Margin started as a stopwatch."
+    bodyTwo:
+        type: textarea
+        label: Second paragraph
+        rows: 5
+        default: "The rest followed from that number."
+    items:
+        type: repeater
+        label: Dates
+        source: collections.milestones
+        add_button_label: "Add date"
+        item_label: year
+        sub_fields:
+            year:
+                type: text
+                label: Year
+                default: "2026"
+            text:
+                type: textarea
+                label: What happened
+                rows: 3
+                default: "What happened that year."
+            note:
+                type: select
+                label: Accent
+                default: "sky"
+                options:
+                    amber: Amber
+                    coral: Coral
+                    sky: Sky
+                    midnight: Midnight
